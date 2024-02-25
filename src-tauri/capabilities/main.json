@@ -1,0 +1,24 @@
+{
+  "$schema": "./schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Capability for the main window",
+  "windows": ["main"],
+  "permissions": [
+    "path:default",
+    "event:default",
+    "window:default",
+    "app:default",
+    "resources:default",
+    "menu:default",
+    "tray:allow-new",
+    "shell:allow-open",
+    "window:allow-hide",
+    "window:allow-show",
+    "positioner:default",
+    "fs:allow-app-write",
+    {
+      "identifier": "fs:scope",
+      "allow": [{ "path": "$APPDATA" }, { "path": "$APPDATA/**" }]
+    }
+  ]
+}
